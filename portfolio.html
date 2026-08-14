@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Muhammad Asim Web Agency — selected business and restaurant website projects.">
+  <title>Portfolio | Muhammad Asim Web Agency</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .portfolio-page { padding: 70px 20px 90px; }
+    .portfolio-page-inner { max-width: 1100px; margin: auto; }
+    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin-top:38px; }
+    .project-card { background:#fff; border:1px solid #e5eaf2; border-radius:22px; overflow:hidden; box-shadow:0 10px 30px rgba(15,23,42,.07); transition:transform .25s ease, box-shadow .25s ease; }
+    .project-card:hover { transform:translateY(-6px); box-shadow:0 18px 42px rgba(15,23,42,.12); }
+    .project-cover { height:250px; display:flex; align-items:center; justify-content:center; padding:25px; text-align:center; }
+    .agency-cover { background:linear-gradient(135deg,#e8f7ee,#c8ead5); }
+    .agency-cover img { width:min(72%,330px); max-height:190px; object-fit:contain; background:#fff; border-radius:18px; padding:16px; box-shadow:0 10px 25px rgba(15,23,42,.08); }
+    .restaurant-cover { background:linear-gradient(135deg,#2b1b12,#7b3f20); }
+    .restaurant-cover img { width:100%; height:100%; object-fit:cover; border-radius:16px; }
+    .project-body { padding:25px; }
+    .project-tag { display:inline-block; padding:6px 10px; border-radius:999px; background:#e9f7ef; color:#16834b; font-size:12px; font-weight:800; margin-bottom:12px; }
+    .project-body h2 { margin:0 0 10px; }
+    .project-body p { margin:0 0 18px; }
+    .project-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .project-actions .btn { display:inline-block; text-decoration:none; }
+    .demo-note { margin-top:28px; padding:16px 18px; border:1px solid #dbeafe; background:#f8fbff; border-radius:14px; color:#596579; font-size:14px; }
+    @media(max-width:700px){ .portfolio-page{padding:55px 16px 70px}.project-grid{grid-template-columns:1fr}.project-cover{height:220px}.project-body{padding:20px} }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand" aria-label="Muhammad Asim Web Agency Home">
+    <img src="logo.png" alt="Muhammad Asim Web Agency Logo" class="logo">
+  </a>
+  <nav id="mainNav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+</header>
+
+<main>
+  <section class="page-hero">
+    <p class="eyebrow">OUR WORK</p>
+    <h1>Portfolio Website</h1>
+    <p>Explore practical website projects built to demonstrate responsive design, customer journeys, business presentation and interactive features.</p>
+  </section>
+
+  <section class="portfolio-page">
+    <div class="portfolio-page-inner">
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-cover agency-cover">
+            <img src="projects/muhammad-asim-business/logo.png" alt="Muhammad Asim Business Website project preview">
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Business Website</span>
+            <h2>Muhammad Asim Business Website</h2>
+            <p>A polished business website concept focused on trust, clear services, customer enquiries and a professional online presence.</p>
+            <div class="project-actions">
+              <a class="btn" href="projects/muhammad-asim-business/index.html">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover restaurant-cover">
+            <img src="projects/lahori-spice/images/chicken-karahi.jpg" alt="Lahori Spice restaurant food preview">
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Restaurant Website</span>
+            <h2>Lahori Spice</h2>
+            <p>Fictional restaurant portfolio concept with real food imagery, menu, cart, checkout demo, payment UI and admin menu management.</p>
+            <div class="project-actions">
+              <a class="btn" href="projects/lahori-spice/index.html">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="demo-note"><strong>Portfolio note:</strong> Lahori Spice is clearly presented as a fictional portfolio/demo project, not a real restaurant client.</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
+      <h2>Let's Build Your Website.</h2>
+      <p>Tell us what you want to create and let's turn your idea into a professional online presence.</p>
+      <a href="contact.html" class="btn btn-light">Discuss Your Project</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h3>Muhammad Asim Web Agency</h3>
+      <p>Modern web development for businesses, creators and organizations worldwide.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio Website</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:sanjarkhanabbasi786@gmail.com">Email Us</a>
+      <a href="https://wa.me/923051240811" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Muhammad Asim Web Agency. All Rights Reserved.</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

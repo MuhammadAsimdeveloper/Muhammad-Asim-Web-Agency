@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout | Lahori Spice</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="demo-banner">PORTFOLIO DEMO • Payment is simulated — no real money is charged</div>
+<header class="navbar"><div class="container nav-inner"><a class="brand" href="index.html"><span class="brand-mark">🌿</span><span class="brand-name">Lahori Spice<small>Checkout</small></span></a><a class="btn btn-outline" href="menu.html">← Back to Menu</a></div><a class="btn btn-outline" href="../../contact.html">Contact Our Agency</a></header>
+<main class="container checkout-wrap"><div class="eyebrow">Complete Order</div><h1 style="font:700 42px 'Playfair Display',serif">Checkout</h1><div id="empty" class="panel hide"><h2>Your cart is empty.</h2><a class="btn btn-gold" href="menu.html">Browse Menu</a></div>
+<div id="checkoutGrid" class="checkout-grid"><section class="form-box"><form id="checkoutForm" class="form"><div class="field"><label>Full Name *</label><input id="customerName" required placeholder="Muhammad Asim"></div><div class="field"><label>Phone *</label><input id="phone" required inputmode="tel" placeholder="0300 0000000"></div><div class="field"><label>Delivery Address *</label><textarea id="address" required placeholder="House, street, city"></textarea></div>
+<div><b>Payment Method</b><div class="payment-options" style="margin-top:9px"><label class="payment-option"><input type="radio" name="payment" value="cash" checked> Cash on Delivery</label><label class="payment-option"><input type="radio" name="payment" value="card"> Demo Card Payment</label><label class="payment-option"><input type="radio" name="payment" value="wallet"> Demo Mobile Wallet</label></div></div>
+<div id="demoCard" class="form demo-card"><div class="field"><label>Demo Card Number</label><input id="cardNumber" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="field"><label>Expiry</label><input id="expiry" placeholder="12/30"></div><div class="field"><label>CVV</label><input id="cvv" inputmode="numeric" maxlength="3" placeholder="123"></div></div><small style="color:var(--muted)">Use the demo number 4242 4242 4242 4242. This does not contact a payment processor.</small></div>
+<button class="btn btn-gold" type="submit">Place Demo Order →</button></form><div id="success" class="success hide" style="margin-top:15px"></div></section>
+<aside class="summary-box"><h2>Order Summary</h2><div id="summary"></div></aside></div></main>
+<footer class="footer"><div class="container footer-grid"><div>© 2026 Lahori Spice • Portfolio Demo</div><div>No real payment is processed</div></div></footer><div id="toast" class="toast"></div>
+<script src="config.js"></script><script src="script.js"></script><script>
+function renderSummary(){
+ const box=document.getElementById("summary"), c=JSON.parse(localStorage.getItem("lahori_cart")||"[]");
+ if(!c.length){document.getElementById("empty").classList.remove("hide");document.getElementById("checkoutGrid").classList.add("hide");return}
+ const sub=c.reduce((s,x)=>s+x.price*x.qty,0), total=sub+SITE_CONFIG.deliveryFee;
+ box.innerHTML=c.map(x=>`<div class="sum-line"><span>${x.qty} × ${escapeHTML(x.name)}</span><b>${money(x.price*x.qty)}</b></div>`).join("")+
+ `<div class="sum-line"><span>Subtotal</span><b>${money(sub)}</b></div><div class="sum-line"><span>Delivery</span><b>${money(SITE_CONFIG.deliveryFee)}</b></div><div class="sum-line sum-total"><span>Total</span><b>${money(total)}</b></div>`;
+}
+document.querySelectorAll('input[name="payment"]').forEach(r=>r.addEventListener("change",()=>{
+ document.getElementById("demoCard").classList.toggle("show",r.checked && r.value==="card");
+}));
+document.getElementById("checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault(); const method=document.querySelector('input[name="payment"]:checked').value;
+ if(method==="card" && document.getElementById("cardNumber").value.replace(/\s/g,"")!=="4242424242424242"){toast("Use demo card 4242 4242 4242 4242");return}
+ const orderId="LS-"+Date.now().toString().slice(-7);
+ document.getElementById("success").innerHTML=`<b>✓ Demo order placed!</b><p>Order ID: <strong>${orderId}</strong></p><p>Payment status: <strong>${method==="cash"?"Cash on delivery":method==="wallet"?"Demo wallet approved":"Demo card approved"}</strong></p><p>No real payment was processed. This flow is for portfolio demonstration.</p>`;
+ document.getElementById("success").classList.remove("hide");localStorage.removeItem("lahori_cart");renderSummary();document.getElementById("checkoutForm").reset();
+});
+renderSummary();
+</script></body></html>
