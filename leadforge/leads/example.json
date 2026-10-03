@@ -1,0 +1,13 @@
+{
+  "name": "Blue Cafe",
+  "category": "Cafe",
+  "city": "Bahawalpur",
+  "phone": "03001234567",
+  "email": "owner@example.com",
+  "website": null,
+  "mapsUrl": "https://maps.google.com/",
+  "source": "public map listing",
+  "verified": true,
+  "optOut": false,
+  "status": "discovered"
+}
