@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LeadForge Lead",
+  "type": "object",
+  "required": ["id", "name", "category", "city", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "category": { "type": "string", "minLength": 1 },
+    "city": { "type": "string", "minLength": 1 },
+    "phone": { "type": ["string", "null"] },
+    "email": { "type": ["string", "null"] },
+    "website": { "type": ["string", "null"], "format": "uri" },
+    "address": { "type": ["string", "null"] },
+    "mapsUrl": { "type": ["string", "null"] },
+    "source": { "type": ["string", "null"] },
+    "verified": { "type": ["boolean", "null"] },
+    "optOut": { "type": "boolean" },
+    "status": {
+      "type": "string",
+      "enum": ["discovered", "demo_ready", "awaiting_approval", "contacted", "proposal", "paid", "delivered", "closed", "do_not_contact"]
+    }
+  }
+}
