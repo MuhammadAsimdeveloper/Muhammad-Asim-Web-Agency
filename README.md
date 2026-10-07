@@ -17,3 +17,8 @@ This package contains the main Muhammad Asim Web Agency site and two portfolio l
 python -m http.server 8000
 ```
 Open `http://127.0.0.1:8000/`.
+
+
+## AI build handoff
+
+AI agents should begin with [`docs/AI_BUILD_START_HERE.md`](docs/AI_BUILD_START_HERE.md) before changing the agency delivery workflow.
