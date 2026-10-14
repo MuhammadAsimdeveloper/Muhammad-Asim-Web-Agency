@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://muhammad-asim-web-agency.vercel.app/</loc>
-    </url>
-
-    <url>
-        <loc>https://muhammad-asim-web-agency.vercel.app/about.html</loc>
-    </url>
-
-    <url>
-        <loc>https://muhammad-asim-web-agency.vercel.app/portfolio.html</loc>
-    </url>
-
-    <url>
-        <loc>https://muhammad-asim-web-agency.vercel.app/contact.html</loc>
-    </url>
-
+<url><loc>https://muhammad-asim-web-agency.vercel.app/</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/about.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/portfolio.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/contact.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/restaurant.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/wellness.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/home-services.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/boutique.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/repair.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/fitness.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/consulting.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/bakery.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/tutoring.html</loc></url>
+<url><loc>https://muhammad-asim-web-agency.vercel.app/projects/photography.html</loc></url>
 </urlset>
