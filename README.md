@@ -1,24 +1,25 @@
-# Muhammad Asim Web Agency — Portfolio Demo Package
+# Muhammad Asim Web Agency
 
-This package contains the main Muhammad Asim Web Agency site and two portfolio live demos:
+A light-first, responsive static website for a small-business-focused web agency.
 
-1. `projects/muhammad-asim-web-agency/` — standalone agency portfolio demo
-2. `projects/lahori-spice/` — fictional restaurant portfolio demo
+## Pages
+- `index.html`: agency homepage and service overview
+- `about.html`: agency approach
+- `portfolio.html`: ten filterable fictional small-business website concepts
+- `contact.html`: project enquiry form with email or WhatsApp handoff
+- `projects/small-business-demo.html?project=<slug>`: distinct themed demo pages for each concept
 
-## Portfolio behavior
-- The Home page no longer contains the old project cards. Use the dedicated Portfolio page.
-- Both portfolio cards use the same **Live Demo** button style.
-- Both live demos include **Contact Our Agency**.
-- Clicking **Contact Our Agency** from either live demo opens the main agency contact page at `../../contact.html`.
-- Lahori Spice is a fictional portfolio/demo project, not a real restaurant client.
+## Ten concept slugs
+`restaurant`, `wellness`, `home-services`, `boutique`, `repair`, `fitness`, `consulting`, `bakery`, `tutoring`, `photography`.
 
-## Local preview
-```bash
-python -m http.server 8000
-```
-Open `http://127.0.0.1:8000/`.
+All ten portfolio entries are explicitly identified as illustrative concepts, not real client engagements. Demo CTAs lead to the agency contact page; no fake checkout, booking, testimonial, or payment behavior is claimed.
 
+## Contact
+- WhatsApp: +92 301 38129910 (wa.me/9230138129910)
+- Email preserved: sanjarkhanabbasi786@gmail.com
 
-## AI build handoff
+## Preview locally
+Run `python -m http.server 8000` in the repository root and open `http://127.0.0.1:8000`.
 
-AI agents should begin with [`docs/AI_BUILD_START_HERE.md`](docs/AI_BUILD_START_HERE.md) before changing the agency delivery workflow.
+## Deployment
+Static HTML/CSS/JS; compatible with the existing Vercel static deployment. Confirm deployment status after pushing the branch and merge when ready.
