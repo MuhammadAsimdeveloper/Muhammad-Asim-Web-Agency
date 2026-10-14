@@ -23,3 +23,7 @@ Run `python -m http.server 8000` in the repository root and open `http://127.0.0
 
 ## Deployment
 Static HTML/CSS/JS; compatible with the existing Vercel static deployment. Confirm deployment status after pushing the branch and merge when ready.
+
+
+## Brand refresh
+The vector logo is `logo.svg`; the browser icon is `favicon.svg`. Contact page CSS has been aligned with the shared design system, and its form prepares a WhatsApp draft without silently sending data.
