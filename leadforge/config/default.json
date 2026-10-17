@@ -1,0 +1,22 @@
+{
+  "agencyName": "Muhammad Asim Web Agency",
+  "currency": "PKR",
+  "targetLocations": ["Bahawalpur, Punjab, Pakistan"],
+  "targetCategories": ["restaurants", "cafes", "salons", "clinics", "hotels", "real estate", "auto dealers", "local shops"],
+  "offers": {
+    "starter": { "name": "Starter Business Website", "pricePkr": 25000 },
+    "business": { "name": "Business Website", "pricePkr": 45000 },
+    "premium": { "name": "Premium Business Website", "pricePkr": 75000 }
+  },
+  "outreach": {
+    "firstContactRequiresApproval": true,
+    "maxFirstContactsPerLead": 1,
+    "maxFollowUpsPerLead": 2,
+    "followUpDelayDays": [3, 7],
+    "includeOptOut": true
+  },
+  "payment": {
+    "requiresVerifiedPayment": true,
+    "releaseOnlyAfterVerifiedPayment": true
+  }
+}
